@@ -3,7 +3,6 @@
  */
 package org.zhiyan.web.config;
 
-import java.util.List;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
@@ -13,12 +12,10 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
-import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -104,16 +101,4 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
         return b;
     }
 
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        System.out.println("添加拦截器");
-    }
-
-    @Override
-    public void extendMessageConverters(
-            List<HttpMessageConverter<?>> converters) {
-        System.out.println("添加消息转换器");
-        WiselyMessageConverter converter = new WiselyMessageConverter();
-        converters.add(converter);
-    }
 }

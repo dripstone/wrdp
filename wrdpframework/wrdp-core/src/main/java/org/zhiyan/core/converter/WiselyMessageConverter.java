@@ -1,4 +1,4 @@
-package org.zhiyan.web.config;
+package org.zhiyan.core.converter;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -26,8 +26,7 @@ public class WiselyMessageConverter
             HttpInputMessage inputMessage)
                     throws IOException, HttpMessageNotReadableException {
         String temp = StreamUtils.copyToString(inputMessage.getBody(),
-
-        Charset.forName("UTF-8"));
+                Charset.forName("UTF-8"));
         String[] tempArr = temp.split("-");
         return new Person(tempArr[0], tempArr[1]);
     }

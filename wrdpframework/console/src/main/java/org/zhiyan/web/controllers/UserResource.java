@@ -3,12 +3,8 @@ package org.zhiyan.web.controllers;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -19,11 +15,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.zhiyan.core.converter.Person;
 import org.zhiyan.entities.Role;
 import org.zhiyan.entities.User;
 import org.zhiyan.services.UserService;
 
-/****
+/**
  * 
  * @Title :*@Description :*@Author :zzy*@Since :2015 年8月12日*@Version :1.1.0
  */
@@ -66,14 +63,10 @@ public class UserResource {
     }
 
     @RequestMapping(value = "/convert", produces = "application/x-wisely")
-    // @ResponseBody
-    // public Person convert(@RequestBody Person person) {
-    // System.out.println("ss");
-    // return person;
-    // }
-    public void convert(HttpServletRequest request,
-            HttpServletResponse response) throws BeansException, Exception {
-        System.out.println("aaa");
+    @ResponseBody
+    public Person convert(@RequestBody Person person) {
+        System.out.println("ss");
+        return person;
     }
 
     @RequestMapping(value = "{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
