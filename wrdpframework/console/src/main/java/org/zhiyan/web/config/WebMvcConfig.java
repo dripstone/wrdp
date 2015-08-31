@@ -40,6 +40,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         super.addViewControllers(registry);
+
         registry.addViewController("login/form").setViewName("login");
         registry.addViewController("welcome").setViewName("welcome");
         registry.addViewController("admin").setViewName("admin");
@@ -49,6 +50,9 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
         registry.addViewController("orgmanage").setViewName("orgmanage");
         registry.addViewController("menumanage").setViewName("menumanage");
         registry.addViewController("rolemanage").setViewName("rolemanage");
+        if (logger.isDebugEnabled()) {
+            logger.debug("addViewControllers");
+        }
     }
 
     /**
@@ -62,6 +66,10 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
         InternalResourceViewResolver url = new InternalResourceViewResolver();
         url.setPrefix("/WEB-INF/jsp/");
         url.setSuffix(".jsp");
+        if (logger.isDebugEnabled()) {
+            logger.debug("prefix:".concat("/WEB-INF/jsp/"));
+            logger.debug("suffix:".concat(".jsp"));
+        }
         return url;
     }
 
@@ -69,6 +77,10 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/resources/**")
                 .addResourceLocations("/resources/");
+        if (logger.isDebugEnabled()) {
+            logger.debug("ResourceHandler:".concat("/resources/**"));
+            logger.debug("ResourceLocations:".concat("/resources/"));
+        }
     }
 
     @Override

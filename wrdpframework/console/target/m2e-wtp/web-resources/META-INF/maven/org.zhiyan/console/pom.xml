@@ -41,5 +41,6 @@
 			<artifactId>wrdp-log</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+
 	</dependencies>
 </project>
