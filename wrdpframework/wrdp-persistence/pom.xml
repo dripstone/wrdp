@@ -10,11 +10,7 @@
 	<name>wrdp-persistence</name>
 
 	<dependencies>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
+		<!-- 数据库驱动 -->
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc6</artifactId>
@@ -23,10 +19,12 @@
 			<groupId>org.apache.derby</groupId>
 			<artifactId>derby</artifactId>
 		</dependency>
+		<!-- 连接池 -->
 		<dependency>
 			<groupId>commons-dbcp</groupId>
 			<artifactId>commons-dbcp</artifactId>
 		</dependency>
+		<!-- 持久层 -->
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-jpa</artifactId>
@@ -34,11 +32,6 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.zhiyan</groupId>
-			<artifactId>wrdp-core</artifactId>
-			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 </project>

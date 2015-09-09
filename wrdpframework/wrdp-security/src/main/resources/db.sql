@@ -1,1 +1,0 @@
-insert into USERS(id,dob,email,name,password) values('admin',null,'admin','admin','1');

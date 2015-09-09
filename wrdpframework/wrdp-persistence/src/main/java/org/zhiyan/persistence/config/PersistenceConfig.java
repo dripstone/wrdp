@@ -37,7 +37,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableTransactionManagement
 @PropertySource(value = { "classpath:application.properties" })
-@EnableJpaRepositories(basePackages = "org.zhiyan..repositories")
+@EnableJpaRepositories(basePackages = "org.zhiyan")
 public class PersistenceConfig {
 
     @Autowired
@@ -62,7 +62,7 @@ public class PersistenceConfig {
 
         factory.setDataSource(dataSource());
         factory.setJpaVendorAdapter(vendorAdapter);
-        factory.setPackagesToScan("org.zhiyan.entities");
+        factory.setPackagesToScan("org.zhiyan");
 
         Properties jpaProperties = new Properties();
         jpaProperties.put("hibernate.hbm2ddl.auto",

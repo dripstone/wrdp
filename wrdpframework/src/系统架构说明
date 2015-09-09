@@ -1,0 +1,6 @@
+							   |- security
+                      |- user -|
+             |- core -|        
+persistence -|        |- log
+             |        |
+                      |- cache
