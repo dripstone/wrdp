@@ -8,10 +8,7 @@
 	<name>wrdpframework</name>
 	<modules>
 		<module>wrdp</module>
-		
-		
 		<module>wrdp-core</module>
-		
 		<module>console</module>
 		<module>wrdp-log</module>
 		<module>wrdp-persistence</module>
@@ -22,6 +19,7 @@
 		<module>wrdp-user</module>
 		<module>wrdp-web1</module>
 		<module>wrdp-web2</module>
+		<module>wrdp-security</module>
 	</modules>
 
 	<developers>
