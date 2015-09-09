@@ -22,7 +22,6 @@
 		<module>wrdp-user</module>
 		<module>wrdp-web1</module>
 		<module>wrdp-web2</module>
-		<module>wrdp-security2</module>
 	</modules>
 
 	<developers>

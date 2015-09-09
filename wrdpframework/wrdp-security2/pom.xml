@@ -6,9 +6,9 @@
 		<artifactId>wrdpframework</artifactId>
 		<version>${project.version}</version>
 	</parent>
-	<artifactId>wrdp-security2</artifactId>
+	<artifactId>wrdp-security</artifactId>
 	<packaging>war</packaging>
-	<name>wrdp-security2</name>
+	<name>wrdp-security</name>
 	<dependencies>
 		<dependency>
 			<groupId>org.slf4j</groupId>
