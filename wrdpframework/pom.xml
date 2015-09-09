@@ -8,10 +8,10 @@
 	<name>wrdpframework</name>
 	<modules>
 		<module>wrdp</module>
-		<module>wrdp1</module>
-		<module>systemconsole</module>
+		
+		
 		<module>wrdp-core</module>
-		<module>wrdp-security</module>
+		
 		<module>console</module>
 		<module>wrdp-log</module>
 		<module>wrdp-persistence</module>
