@@ -12,9 +12,20 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
 			<groupId>org.zhiyan</groupId>
 			<artifactId>wrdp-core</artifactId>
 			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zhiyan</groupId>
+			<artifactId>wrdp-ria</artifactId>
+			<version>${project.version}</version>
+			<type>war</type>
 		</dependency>
 	</dependencies>
 </project>

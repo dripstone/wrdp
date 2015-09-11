@@ -8,4 +8,11 @@
   <artifactId>wrdp-ria</artifactId>
   <packaging>war</packaging>
   <name>wrdp-ria</name>
+  <dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+  </dependencies>
 </project>

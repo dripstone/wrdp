@@ -10,6 +10,12 @@
         <dependent-module archiveName="wrdp-persistence-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wrdp-persistence/wrdp-persistence">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module deploy-path="/" handle="module:/overlay/prj/wrdp-ria?includes=**/**&amp;excludes=META-INF/MANIFEST.MF">
+            <dependency-type>consumes</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/" handle="module:/overlay/slf/?includes=**/**&amp;excludes=META-INF/MANIFEST.MF">
+            <dependency-type>consumes</dependency-type>
+        </dependent-module>
         <property name="context-root" value="wrdp-user"/>
         <property name="java-output-path" value="/wrdp-user/target/classes"/>
     </wb-module>
