@@ -10,6 +10,11 @@
 	<name>wrdp-persistence</name>
 
 	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
 		<!-- 数据库驱动 -->
 		<dependency>
 			<groupId>com.oracle</groupId>
@@ -28,10 +33,18 @@
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-jpa</artifactId>
+			<exclusions>
+				<exclusion></exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.zhiyan</groupId>
+			<artifactId>wrdp-core</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 </project>

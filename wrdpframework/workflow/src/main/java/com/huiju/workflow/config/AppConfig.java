@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.core.annotation.Order;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Controller;
 
@@ -23,6 +24,7 @@ import org.springframework.stereotype.Controller;
  * @Version:1.1.0
  */
 @Configuration
+@Order(1)
 @ComponentScan(basePackages = {
         "com.huiju" }, useDefaultFilters = true, excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, value = {
                 Controller.class }) )

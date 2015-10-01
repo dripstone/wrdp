@@ -8,8 +8,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.zhiyan.user.entities.User;
-import org.zhiyan.user.repositories.UserRepository;
+import org.zhiyan.user.entity.User;
+import org.zhiyan.user.repository.UserRepository;
 
 /**
  * 

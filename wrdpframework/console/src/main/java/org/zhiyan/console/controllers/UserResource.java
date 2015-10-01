@@ -15,14 +15,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.zhiyan.core.converter.Person;
 import org.zhiyan.security.services.UserService;
-import org.zhiyan.user.entities.Role;
-import org.zhiyan.user.entities.User;
+import org.zhiyan.user.entity.Role;
+import org.zhiyan.user.entity.User;
 
 /**
- * 
- * @Title :*@Description :*@Author :zzy*@Since :2015 年8月12日*@Version :1.1.0
+ * @Title:
+ * @Description:
+ * @Author:zzy
+ * @Since:2015年10月1日
+ * @Version:1.1.0
  */
 @Controller
 @RequestMapping("/rest/users/")
@@ -60,13 +62,6 @@ public class UserResource {
     public ResponseEntity<User> updateUser(@RequestBody User user) {
         User savedUser = userService.update(user);
         return new ResponseEntity<User>(savedUser, HttpStatus.OK);
-    }
-
-    @RequestMapping(value = "/convert", produces = "application/x-wisely")
-    @ResponseBody
-    public Person convert(@RequestBody Person person) {
-        System.out.println("ss");
-        return person;
     }
 
     @RequestMapping(value = "{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)

@@ -10,7 +10,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.zhiyan.security.security.SecurityUser;
 import org.zhiyan.security.services.UserService;
-import org.zhiyan.user.entities.User;
+import org.zhiyan.user.entity.User;
 
 /**
  * 

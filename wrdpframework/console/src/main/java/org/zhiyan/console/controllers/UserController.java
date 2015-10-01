@@ -7,7 +7,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.zhiyan.security.security.SecurityUser;
 import org.zhiyan.security.services.UserService;
-import org.zhiyan.user.entities.User;
+import org.zhiyan.user.entity.User;
 
 /******
  * 

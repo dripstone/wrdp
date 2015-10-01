@@ -17,7 +17,7 @@
 <title>用户管理</title>
 </head>
 <body class="claro">
-<spring:message code="aaa"></spring:message>
+<spring:message code="国际化"></spring:message>
 <table data-dojo-type="dojox.grid.DataGrid" >
   <thead>
     <tr>

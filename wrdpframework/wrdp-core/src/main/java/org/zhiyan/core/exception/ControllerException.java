@@ -3,7 +3,7 @@ package org.zhiyan.core.exception;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 
-public class ControllerException extends Exception {
+public class ControllerException extends RuntimeException {
 
     private static final long serialVersionUID = 6190999553794560428L;
 

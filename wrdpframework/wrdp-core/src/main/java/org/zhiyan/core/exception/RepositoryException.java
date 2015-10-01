@@ -3,7 +3,7 @@ package org.zhiyan.core.exception;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 
-public class RepositoryException extends Exception {
+public class RepositoryException extends RuntimeException {
 
     private static final long serialVersionUID = -228648155190782962L;
 

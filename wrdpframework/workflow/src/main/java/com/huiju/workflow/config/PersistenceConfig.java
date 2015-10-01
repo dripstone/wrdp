@@ -37,7 +37,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableTransactionManagement
 @PropertySource(value = { "classpath:application.properties" })
-@EnableJpaRepositories(basePackages = "org.zhiyan..repositories")
+@EnableJpaRepositories(basePackages = "com.huiju.workflow.repositories")
 public class PersistenceConfig {
 
     @Autowired
@@ -47,8 +47,9 @@ public class PersistenceConfig {
     private String initDatabase;
 
     @Bean
-    public PlatformTransactionManager transactionManager() {
-        EntityManagerFactory factory = entityManagerFactory().getObject();
+    public PlatformTransactionManager transactionManager(
+            LocalContainerEntityManagerFactoryBean entityManagerFactory) {
+        EntityManagerFactory factory = entityManagerFactory.getObject();
         return new JpaTransactionManager(factory);
     }
 
@@ -62,7 +63,7 @@ public class PersistenceConfig {
 
         factory.setDataSource(dataSource());
         factory.setJpaVendorAdapter(vendorAdapter);
-        factory.setPackagesToScan("org.zhiyan.entities");
+        factory.setPackagesToScan("com.huiju.workflow");
 
         Properties jpaProperties = new Properties();
         jpaProperties.put("hibernate.hbm2ddl.auto",
@@ -95,7 +96,6 @@ public class PersistenceConfig {
 
     @Bean
     public DataSourceInitializer dataSourceInitializer(DataSource dataSource) {
-        System.out.println("**************************" + initDatabase);
         DataSourceInitializer dataSourceInitializer = new DataSourceInitializer();
         dataSourceInitializer.setDataSource(dataSource);
         ResourceDatabasePopulator databasePopulator = new ResourceDatabasePopulator();

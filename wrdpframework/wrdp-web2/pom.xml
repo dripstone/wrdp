@@ -8,4 +8,17 @@
   <artifactId>wrdp-web2</artifactId>
   <packaging>war</packaging>
   <name>wrdp-web2</name>
+  <dependencies>
+  		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.zhiyan</groupId>
+			<artifactId>testjar</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+  </dependencies>
+
 </project>

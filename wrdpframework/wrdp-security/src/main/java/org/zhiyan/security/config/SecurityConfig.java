@@ -60,5 +60,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 // #9
                 .loginProcessingUrl("/login").failureUrl("/login/form?error")
                 .permitAll(); // #5
+
+        http.csrf().disable().authorizeRequests().antMatchers("").permitAll();
     }
 }

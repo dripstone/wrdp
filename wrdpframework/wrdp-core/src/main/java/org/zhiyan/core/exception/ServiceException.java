@@ -3,7 +3,7 @@ package org.zhiyan.core.exception;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 
-public class ServiceException extends Exception {
+public class ServiceException extends RuntimeException {
 
     private static final long serialVersionUID = 1403241379992869500L;
 

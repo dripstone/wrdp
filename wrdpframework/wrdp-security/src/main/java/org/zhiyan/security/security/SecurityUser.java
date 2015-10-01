@@ -13,9 +13,9 @@ import java.util.Set;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.zhiyan.user.entities.Resource;
-import org.zhiyan.user.entities.Role;
-import org.zhiyan.user.entities.User;
+import org.zhiyan.user.entity.Resource;
+import org.zhiyan.user.entity.Role;
+import org.zhiyan.user.entity.User;
 
 /**
  * 

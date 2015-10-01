@@ -3,6 +3,7 @@
  */
 package com.huiju.workflow.config;
 
+import java.util.List;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
@@ -12,7 +13,11 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import org.springframework.core.annotation.Order;
+import org.springframework.http.converter.FormHttpMessageConverter;
+import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -30,17 +35,19 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  * @Version:1.1.0
  */
 @Configuration
+@EnableTransactionManagement // 由于持久层配置放到了根上下文，而根上下文在加载bean时并不加载controller类，所以子上下文的事务需要重新指定，就可以加载事务了
+@Order(10)
 @EnableWebMvc
 @ComponentScan(basePackages = "com.huiju", useDefaultFilters = false, includeFilters = {
         @ComponentScan.Filter(type = FilterType.ANNOTATION, value = {
                 Controller.class }) })
+
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
     private static final Logger logger = Logger.getLogger(WebMvcConfig.class);
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         super.addViewControllers(registry);
-
         registry.addViewController("login/form").setViewName("login");
         registry.addViewController("welcome").setViewName("welcome");
         registry.addViewController("admin").setViewName("admin");
@@ -64,10 +71,10 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
     @Bean
     public ViewResolver resolver() {
         InternalResourceViewResolver url = new InternalResourceViewResolver();
-        url.setPrefix("/WEB-INF/jsp/");
+        url.setPrefix("/");
         url.setSuffix(".jsp");
         if (logger.isDebugEnabled()) {
-            logger.debug("prefix:".concat("/WEB-INF/jsp/"));
+            logger.debug("prefix:".concat("/"));
             logger.debug("suffix:".concat(".jsp"));
         }
         return url;
@@ -111,6 +118,14 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
         mappings.put("org.springframework.dao.DataAccessException", "error");
         b.setExceptionMappings(mappings);
         return b;
+    }
+
+    @Override
+    public void extendMessageConverters(
+            List<HttpMessageConverter<?>> converters) {
+        FormHttpMessageConverter f = new FormHttpMessageConverter();
+
+        converters.add(f);
     }
 
 }
