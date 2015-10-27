@@ -92,7 +92,7 @@
 		<logback.version>1.0.13</logback.version>
 		<spring.version>4.1.7.RELEASE</spring.version>
 		<spring-data-jpa.version>1.9.0.RELEASE</spring-data-jpa.version>
-		<spring-security.version>4.0.1.RELEASE</spring-security.version>
+		<spring-security.version>4.0.2.RELEASE</spring-security.version>
 		<spring-boot.version>1.2.6.RELEASE</spring-boot.version>
 		<hibernate.version>4.3.10.Final</hibernate.version>
 		<aspectj.version>1.8.5</aspectj.version>
