@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.core.annotation.Order;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 import org.zhiyan.core.config.impl.WebMvcCoreConfig;
 import org.zhiyan.core.exception.CoreException;
@@ -22,6 +23,7 @@ import org.zhiyan.core.listener.MyListener;
  * @Since:2015年9月25日
  * @Version:1.1.0
  */
+@Order(20)
 public abstract class AbstractAnnotationConfigInitializer
         extends AbstractAnnotationConfigDispatcherServletInitializer {
     protected Log logger = LogFactory.getLog(getClass());

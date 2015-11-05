@@ -3,7 +3,6 @@
  */
 package org.zhiyan.core.config.impl;
 
-import org.springframework.core.annotation.Order;
 import org.zhiyan.core.config.AbstractAnnotationConfigInitializer;
 
 /**
@@ -13,7 +12,6 @@ import org.zhiyan.core.config.AbstractAnnotationConfigInitializer;
  * @Since:2015年8月12日
  * @Version:1.1.0
  */
-@Order(20)
 public class CoreInitializer extends AbstractAnnotationConfigInitializer {
 
     private final String appName = "core";
