@@ -3,9 +3,6 @@
  */
 package org.zhiyan.core.config;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.core.annotation.Order;
 
 /**
@@ -18,25 +15,11 @@ import org.springframework.core.annotation.Order;
 @Order(20)
 public class CoreInitializer extends AbstractAnnotationConfigInitializer {
 
-    public static List<Class<?>> rootConfigClassesList = new ArrayList<Class<?>>();
-
     private final String appName = "core";
 
     @Override
     protected String getAppName() {
         return this.appName;
-    }
-
-    /**
-     * 根上下文配置类加载
-     */
-    @Override
-    protected final Class<?>[] getRootConfigClasses() {
-        Class<?>[] cls = new Class<?>[rootConfigClassesList.size()];
-        for (int i = 0; i < rootConfigClassesList.size(); i++) {
-            cls[i] = rootConfigClassesList.get(i);
-        }
-        return cls;
     }
 
     @Override

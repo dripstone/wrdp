@@ -18,7 +18,7 @@ import org.springframework.web.WebApplicationInitializer;
  * @Version:1.1.0
  */
 @Order(30)
-public abstract class AfterApplicationInitializer
+public abstract class AbstractAfterApplicationInitializer
         implements WebApplicationInitializer {
 
     protected Log logger = LogFactory.getLog(getClass());

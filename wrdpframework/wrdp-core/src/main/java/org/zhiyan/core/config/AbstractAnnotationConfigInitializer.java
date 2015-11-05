@@ -1,6 +1,8 @@
 package org.zhiyan.core.config;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.servlet.ServletContext;
@@ -20,11 +22,12 @@ import org.zhiyan.core.exception.CoreException;
  */
 public abstract class AbstractAnnotationConfigInitializer
         extends AbstractAnnotationConfigDispatcherServletInitializer {
-
     protected Log logger = LogFactory.getLog(getClass());
 
     // 存储appName
     private static Set<String> appNameSet = new HashSet<String>();
+    // 存储根上下文配置文件
+    public static List<Class<?>> rootConfigClassesList = new ArrayList<Class<?>>();
 
     /**
      * 获取APP名称
@@ -48,8 +51,12 @@ public abstract class AbstractAnnotationConfigInitializer
      * 根上下文配置类加载
      */
     @Override
-    protected Class<?>[] getRootConfigClasses() {
-        return new Class<?>[] { CoreServiceConfig.class };
+    final protected Class<?>[] getRootConfigClasses() {
+        Class<?>[] cls = new Class<?>[rootConfigClassesList.size()];
+        for (int i = 0; i < rootConfigClassesList.size(); i++) {
+            cls[i] = rootConfigClassesList.get(i);
+        }
+        return cls;
     }
 
     /**
