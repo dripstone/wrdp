@@ -24,7 +24,7 @@ import org.zhiyan.core.listener.MyListener;
  * @Version:1.1.0
  */
 @Order(20)
-public abstract class AbstractAnnotationConfigInitializer
+public abstract class AbstractApplicationInitializer
         extends AbstractAnnotationConfigDispatcherServletInitializer {
     protected Log logger = LogFactory.getLog(getClass());
 

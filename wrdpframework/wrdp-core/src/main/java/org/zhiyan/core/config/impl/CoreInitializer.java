@@ -3,7 +3,7 @@
  */
 package org.zhiyan.core.config.impl;
 
-import org.zhiyan.core.config.AbstractAnnotationConfigInitializer;
+import org.zhiyan.core.config.AbstractApplicationInitializer;
 
 /**
  * @Title:
@@ -12,7 +12,7 @@ import org.zhiyan.core.config.AbstractAnnotationConfigInitializer;
  * @Since:2015年8月12日
  * @Version:1.1.0
  */
-public class CoreInitializer extends AbstractAnnotationConfigInitializer {
+public class CoreInitializer extends AbstractApplicationInitializer {
 
     private final String appName = "core";
 
