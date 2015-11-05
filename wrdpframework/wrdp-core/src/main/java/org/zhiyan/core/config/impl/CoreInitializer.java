@@ -1,9 +1,10 @@
 /**
  * 
  */
-package org.zhiyan.core.config;
+package org.zhiyan.core.config.impl;
 
 import org.springframework.core.annotation.Order;
+import org.zhiyan.core.config.AbstractAnnotationConfigInitializer;
 
 /**
  * @Title:

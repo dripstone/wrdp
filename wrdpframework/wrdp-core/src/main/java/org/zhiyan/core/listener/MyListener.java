@@ -1,4 +1,4 @@
-package org.zhiyan.core.config;
+package org.zhiyan.core.listener;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.zhiyan.core.config;
+package org.zhiyan.core.config.impl;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

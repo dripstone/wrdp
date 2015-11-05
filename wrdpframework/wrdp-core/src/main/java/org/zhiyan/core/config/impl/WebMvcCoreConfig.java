@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.zhiyan.core.config;
+package org.zhiyan.core.config.impl;
 
 import java.util.List;
 import java.util.Properties;
