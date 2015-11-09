@@ -7,7 +7,7 @@ import org.zhiyan.ria.typeFilter.LoadMetadata;
 
 @Configuration
 @ComponentScan(basePackages = {
-		"org.zhiyan" }, useDefaultFilters = true, includeFilters = @ComponentScan.Filter(type = FilterType.CUSTOM, value = {
-				LoadMetadata.class }) )
+        "org.zhiyan" }, useDefaultFilters = true, includeFilters = @ComponentScan.Filter(type = FilterType.CUSTOM, value = {
+                LoadMetadata.class }) )
 public class RiaConfig {
 }

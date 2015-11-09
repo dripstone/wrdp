@@ -1,5 +1,12 @@
 eclipse.preferences.version=1
 encoding//src/main/java=UTF-8
+encoding//src/main/java/vo/oa/goAbroad/talentbase/neusoft/com/GoAbroadAction.java=UTF-8
+encoding//src/main/java/vo/oa/goAbroad/talentbase/neusoft/com/GoAbroadActionService.java=UTF-8
+encoding//src/main/java/vo/oa/goAbroad/talentbase/neusoft/com/GoAbroadActionServiceLocator.java=UTF-8
+encoding//src/main/java/vo/oa/goAbroad/talentbase/neusoft/com/GoAbroadOneServiceSoapBindingImpl.java=UTF-8
+encoding//src/main/java/vo/oa/goAbroad/talentbase/neusoft/com/GoAbroadOneServiceSoapBindingSkeleton.java=UTF-8
+encoding//src/main/java/vo/oa/goAbroad/talentbase/neusoft/com/GoAbroadOneServiceSoapBindingStub.java=UTF-8
+encoding//src/main/java/vo/oa/goAbroad/talentbase/neusoft/com/java/GoAbroadVO.java=UTF-8
 encoding//src/main/resources=UTF-8
 encoding//src/test/java=UTF-8
 encoding//src/test/resources=UTF-8

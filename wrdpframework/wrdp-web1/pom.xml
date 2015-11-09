@@ -11,9 +11,13 @@
 	<name>wrdp-web1</name>
 	<dependencies>
 		<dependency>
-			<groupId>org.zhiyan</groupId>
-			<artifactId>wrdp-core</artifactId>
-			<version>${project.version}</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>axis</groupId>
+			<artifactId>axis</artifactId>
+			<version>1.4</version>
 		</dependency>
 	</dependencies>
 </project>
