@@ -16,7 +16,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.zhiyan</groupId>
-			<artifactId>testjar</artifactId>
+			<artifactId>wrdp-core</artifactId>
 			<version>${project.version}</version>
 		</dependency>
   </dependencies>

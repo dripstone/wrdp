@@ -6,8 +6,9 @@ import org.springframework.context.annotation.FilterType;
 import org.zhiyan.ria.typeFilter.LoadMetadata;
 
 @Configuration
-@ComponentScan(basePackages = {
-        "org.zhiyan" }, useDefaultFilters = true, includeFilters = @ComponentScan.Filter(type = FilterType.CUSTOM, value = {
+@ComponentScan(basePackages = { "org.zhiyan",
+        "com.neusoft" }, useDefaultFilters = true, includeFilters = @ComponentScan.Filter(type = FilterType.CUSTOM, value = {
                 LoadMetadata.class }) )
 public class RiaConfig {
+
 }

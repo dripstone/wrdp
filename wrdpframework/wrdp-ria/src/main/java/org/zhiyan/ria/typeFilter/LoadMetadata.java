@@ -14,38 +14,43 @@ import org.zhiyan.ria.cache.EntityMetadataCache;
 
 public class LoadMetadata implements TypeFilter {
 
-	@Override
-	public boolean match(MetadataReader metadataReader, MetadataReaderFactory metadataReaderFactory)
-			throws IOException {
-		Set<String> annotationSet = metadataReader.getAnnotationMetadata().getAnnotationTypes();
-		if (annotationSet.contains("javax.persistence.Entity")) {
-			System.out.println(metadataReader.getAnnotationMetadata().getClassName());
-			this.loadEntityMetadata(metadataReader.getAnnotationMetadata().getClassName());
-		}
-		return false;
-	}
+    @Override
+    public boolean match(MetadataReader metadataReader,
+            MetadataReaderFactory metadataReaderFactory) throws IOException {
+        Set<String> annotationSet = metadataReader.getAnnotationMetadata()
+                .getAnnotationTypes();
+        if (annotationSet.contains("javax.persistence.Entity")) {
+            System.out.println(
+                    metadataReader.getAnnotationMetadata().getClassName());
+            this.loadEntityMetadata(
+                    metadataReader.getAnnotationMetadata().getClassName());
+        }
+        return false;
+    }
 
-	private void loadEntityMetadata(String className) {
-		Class<?> cl;
-		try {
-			cl = Class.forName(className);
-			String entityName = cl.getName();
-			ReflectionUtils.doWithFields(cl, new FieldCallback() {
-				@Override
-				public void doWith(Field field) throws IllegalArgumentException, IllegalAccessException {
-					String fieldName = field.getName();
-					if (!"serialVersionUID".equals(fieldName)) {
-						EntityMetadata metadata = new EntityMetadata();
-						metadata.setName(entityName.concat(".").concat(fieldName));
-						metadata.setType(field.getType().getName());
-						EntityMetadataCache.put(entityName, metadata);
-					}
-				}
-			});
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+    private void loadEntityMetadata(String className) {
+        Class<?> cl;
+        try {
+            cl = Class.forName(className);
+            final String entityName = cl.getName();
+            ReflectionUtils.doWithFields(cl, new FieldCallback() {
+                @Override
+                public void doWith(Field field) throws IllegalArgumentException,
+                        IllegalAccessException {
+                    String fieldName = field.getName();
+                    if (!"serialVersionUID".equals(fieldName)) {
+                        EntityMetadata metadata = new EntityMetadata();
+                        metadata.setName(
+                                entityName.concat(".").concat(fieldName));
+                        metadata.setType(field.getType().getName());
+                        EntityMetadataCache.put(entityName, metadata);
+                    }
+                }
+            });
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 
-	}
+    }
 }

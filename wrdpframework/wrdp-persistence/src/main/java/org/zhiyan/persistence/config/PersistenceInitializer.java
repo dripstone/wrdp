@@ -1,9 +1,8 @@
 package org.zhiyan.persistence.config;
 
-import org.zhiyan.core.config.AbstractAnnotationConfigInitializer;
+import org.zhiyan.core.config.AbstractApplicationInitializer;
 
-public class PersistenceInitializer
-        extends AbstractAnnotationConfigInitializer {
+public class PersistenceInitializer extends AbstractApplicationInitializer {
 
     private String appName = "persistence";
 

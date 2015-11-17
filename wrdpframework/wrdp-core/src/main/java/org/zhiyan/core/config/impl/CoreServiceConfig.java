@@ -20,4 +20,5 @@ import org.springframework.stereotype.Controller;
         @ComponentScan.Filter(type = FilterType.ANNOTATION, value = {
                 Controller.class }) })
 public class CoreServiceConfig {
+
 }

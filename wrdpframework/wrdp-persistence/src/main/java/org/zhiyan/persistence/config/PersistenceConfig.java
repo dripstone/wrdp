@@ -44,8 +44,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
         @ComponentScan.Filter(type = FilterType.ANNOTATION, value = Repository.class) })
 public class PersistenceConfig {
 
-    private static final String PROPERTY_NAME_ENTITYMANAGER_PACKAGES_TO_SCAN = "entitymanager.packages.to.scan";
-
     @Autowired
     private Environment env;
 
@@ -68,7 +66,7 @@ public class PersistenceConfig {
 
         factory.setDataSource(dataSource());
         factory.setJpaVendorAdapter(vendorAdapter);
-        factory.setPackagesToScan("org.zhiyan");
+        factory.setPackagesToScan("org.zhiyan", "com.neusoft");
 
         Properties jpaProperties = new Properties();
         jpaProperties.put("hibernate.hbm2ddl.auto",

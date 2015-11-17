@@ -18,6 +18,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.zhiyan</groupId>
+			<artifactId>wrdp-core</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zhiyan</groupId>
 			<artifactId>wrdp-persistence</artifactId>
 			<version>${project.version}</version>
 		</dependency>

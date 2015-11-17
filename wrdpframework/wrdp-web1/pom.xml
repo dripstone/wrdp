@@ -10,14 +10,29 @@
 	<packaging>war</packaging>
 	<name>wrdp-web1</name>
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
+  		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>axis</groupId>
-			<artifactId>axis</artifactId>
-			<version>1.4</version>
+			<groupId>org.zhiyan</groupId>
+			<artifactId>wrdp-core</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zhiyan</groupId>
+			<artifactId>wrdp-web2</artifactId>
+			<version>${project.version}</version>
+			<type>war</type>
+		</dependency>
+		<dependency>
+			<groupId>org.zhiyan</groupId>
+			<artifactId>wrdp-web2</artifactId>
+			<version>${project.version}</version>
+			<type>jar</type>
+			<classifier>classes</classifier>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 </project>
