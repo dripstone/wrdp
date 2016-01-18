@@ -8,4 +8,12 @@
   <artifactId>wrdpapplication</artifactId>
   <packaging>pom</packaging>
   <name>wrdpapplication</name>
+  <modules>
+  	<module>wrdp-console</module>
+  	<module>wrdp-workflow</module>
+  	<module>wrdp-report</module>
+  	<module>wrdp-rule</module>
+  	<module>wrdp-esb</module>
+  	<module>wrdp-monitor</module>
+  </modules>
 </project>

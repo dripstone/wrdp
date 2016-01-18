@@ -8,4 +8,16 @@
   <artifactId>wrdpbasics</artifactId>
   <packaging>pom</packaging>
   <name>wrdpbasics</name>
+  <modules>
+  	<module>wrdp-core</module>
+  	<module>wrdp-persistence</module>
+  	<module>wrdp-log</module>
+  	<module>wrdp-exception</module>
+  	<module>wrdp-cache</module>
+  	<module>wrdp-mq</module>
+  	<module>wrdp-email</module>
+  	<module>wrdp-sms</module>
+  	<module>wrdp-wechat</module>
+  	<module>wrdp-ria</module>
+  </modules>
 </project>

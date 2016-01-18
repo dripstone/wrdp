@@ -28,6 +28,7 @@
 		<module>wrdpbasics</module>
 		<module>wrdpbusiness</module>
 		<module>wrdpapplication</module>
+		<module>wrdpproduct</module>
 	</modules>
 
 	<developers>

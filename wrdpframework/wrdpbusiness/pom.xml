@@ -8,4 +8,19 @@
   <artifactId>wrdpbusiness</artifactId>
   <packaging>pom</packaging>
   <name>wrdpbusiness</name>
+  <modules>
+  	<module>wrdp-org</module>
+  	<module>wrdp-user</module>
+  	<module>wrdp-role</module>
+  	<module>wrdp-security</module>
+  	<module>wrdp-codemanagement</module>
+  	<module>wrdp-filemanagement</module>
+  	<module>wrdp-codemanager</module>
+  	<module>wrdp-filemanager</module>
+  	<module>wrdp-notificationservice</module>
+  	<module>wrdp-parametermanager</module>
+  	<module>wrdp-parammanager</module>
+  	<module>wrdp-noticemanager</module>
+  	<module>wrdp-taskmanager</module>
+  </modules>
 </project>
