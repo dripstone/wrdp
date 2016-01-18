@@ -25,6 +25,9 @@
 		<module>springmvc-datajpa-security-demo</module>
 		<module>wrdp-soms</module>
 		<module>wrdpbasis</module>
+		<module>wrdpbasics</module>
+		<module>wrdpbusiness</module>
+		<module>wrdpapplication</module>
 	</modules>
 
 	<developers>
