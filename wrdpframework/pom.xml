@@ -23,6 +23,8 @@
 		<module>dojo</module>
 		<module>testjar</module>
 		<module>springmvc-datajpa-security-demo</module>
+		<module>wrdp-soms</module>
+		<module>wrdpbasis</module>
 	</modules>
 
 	<developers>
@@ -280,7 +282,7 @@
 			<dependency>
 				<groupId>javax.servlet</groupId>
 				<artifactId>javax.servlet-api</artifactId>
-				<version>3.0.1</version>
+				<version>3.1.0</version>
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
