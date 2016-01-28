@@ -1,7 +1,10 @@
 package org.zhiyan.core.listener;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -14,7 +17,10 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 import org.zhiyan.core.applications.Application;
 
 public class AppLoaderListener extends ContextLoaderListener implements ServletContextListener {
+	public static Set<Class<?>> commonConfigClasses = new LinkedHashSet<Class<?>>();
+
 	public static List<String> appList = new ArrayList<String>();
+
 	public static final String APP_CONTEXT_PREFIX = AppLoaderListener.class.getName() + ".CONTEXT.";
 
 	private Application application;
@@ -32,9 +38,12 @@ public class AppLoaderListener extends ContextLoaderListener implements ServletC
 		WebApplicationContext rootContext = WebApplicationContextUtils
 				.getWebApplicationContext(sce.getServletContext());
 		AnnotationConfigWebApplicationContext appContext = new AnnotationConfigWebApplicationContext();
-		Class<?>[] configClasses = this.application.getConfigClasses();
-		if (!ObjectUtils.isEmpty(configClasses)) {
-			appContext.register(configClasses);
+		Class<?>[] appClasses = this.application.getConfigClasses();
+		Class<?>[] commonClasses = commonConfigClasses.toArray(new Class<?>[commonConfigClasses.size()]);
+		Class<?>[] classes = Arrays.copyOf(appClasses, appClasses.length + commonClasses.length);
+		System.arraycopy(commonClasses, 0, classes, appClasses.length, commonClasses.length);
+		if (!ObjectUtils.isEmpty(classes)) {
+			appContext.register(classes);
 		}
 		appContext.setServletContext(sce.getServletContext());
 		appContext.setNamespace(attrName + "-space");

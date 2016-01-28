@@ -23,7 +23,7 @@ import org.zhiyan.core.stereotype.Action;
  * @Version:1.1.0
  */
 @Configuration
-@ComponentScan(basePackages = "org.zhiyan.core.controller", useDefaultFilters = false, includeFilters = {
+@ComponentScan(basePackages = "org.zhiyan.core.action", useDefaultFilters = false, includeFilters = {
 		@ComponentScan.Filter(type = FilterType.ANNOTATION, value = { Action.class }) })
 @EnableWebMvc
 public class WebMvcConfig extends WebMvcConfigurerAdapter {

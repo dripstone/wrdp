@@ -44,8 +44,6 @@ public class PersistenceConfig {
 		HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
 		vendorAdapter.setGenerateDdl(Boolean.TRUE);
 		vendorAdapter.setShowSql(Boolean.TRUE);
-
-		factory.setPersistenceUnitName("core");
 		factory.setDataSource(dataSource());
 		factory.setJpaVendorAdapter(vendorAdapter);
 		String packages = env.getProperty("entity.packages");

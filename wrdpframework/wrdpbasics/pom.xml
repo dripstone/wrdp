@@ -19,5 +19,6 @@
   	<module>wrdp-sms</module>
   	<module>wrdp-wechat</module>
   	<module>wrdp-ria</module>
+  	<module>wrdp-transaction</module>
   </modules>
 </project>
